@@ -1,0 +1,20 @@
+.button {
+  font-family: $font-title;
+  font-weight: 400;
+  border-radius: 4px;
+  display: block;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+
+  &--accent {
+    background-color: #7859CF;
+    color: #ffffff;
+  }
+
+  &--secondary {
+    background-color:#ffffff;
+    color: #7859CF;
+  }
+
+}

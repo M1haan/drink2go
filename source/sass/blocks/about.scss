@@ -1,0 +1,54 @@
+.about {
+  background-color: #F3EBE1;
+  font-family: $font-title;
+}
+
+.about__badge {
+  color: #7859CF;
+  text-align: center;
+}
+
+.about__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #333333;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.about__description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #333333;
+  text-align: center;
+}
+
+.about__buy {
+  display: flex;
+  margin: 0 25px;
+}
+
+.about__old-price {
+  color: #7859CF;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  margin-right: 6px;
+}
+
+.about__new-price {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  color: #333333;
+  margin-right: 20px;
+}
+
+.about__button-buy {
+  text-decoration: none;
+  padding: 8px 20px;
+}

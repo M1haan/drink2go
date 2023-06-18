@@ -1,0 +1,23 @@
+.footer {
+  font-family: $font-title;
+}
+
+.footer__wrapper {
+  min-width: 280px;
+  padding: 0 20px;
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__author {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #BDBDBD;
+}
+
+.footer__author-link {
+  text-decoration: none;
+  color: #BDBDBD;
+}
