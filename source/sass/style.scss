@@ -6,7 +6,7 @@
 @import "global/container";
 
 /* BLOCKS */
-@import "blocks/header";
+@import "blocks/header.scss";
 @import "blocks/about";
 @import "blocks/buttons";
 @import "blocks/advantages";
@@ -17,4 +17,6 @@
 @import "blocks/social";
 @import "blocks/navigation";
 @import "blocks/media";
-@import "blocks/contacts"
+@import "blocks/contacts";
+@import "blocks/user-list";
+@import "blocks/nav-list";

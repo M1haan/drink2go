@@ -1,52 +1,128 @@
-.header {
-  background-color: #ffffff;
-  color: #000000;
+.header__nav {
+  font-family: $font-title;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @media (min-width: $tablet-width) {
+    justify-content: space-between;
+    padding-right: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 40px;
+  }
 }
 
 .header__container {
   display: flex;
   align-items: center;
   margin: 0 auto;
-  min-height: 65px;
-}
+  padding: 0 20px;
+  width: 280px;
 
-.header__nav-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  display: none;
   @media (min-width: $tablet-width) {
-    flex-direction: row;
+    width: 728px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 1360px;
+    padding: 0 40px;
   }
 }
 
-.header__logo {
-  margin-right: auto;
-  margin-left: 20px;
-}
-
-.header__icons {
-  padding: 24px;
-}
-
-
-.header__nav-link {
-  font-family: $font-title;
-  font-weight: 500;
+.header__link-logo{
   font-size: 12px;
   line-height: 16px;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  color: #333333;
-  text-decoration: none;
-  padding: 20px 0;
-  display: block;
+  order: 0;
 
-  @media (min-width: $tablet-width) {
-    padding: 20px;
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 170px 1fr;
+    column-gap: 20px;
+    align-items: center;
+    width: 316px;
   }
 }
 
+.header__logo-image {
+  width: 32px;
+  height: 36px;
+
+  @media (min-width: $tablet-width) {
+    width: 82px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 170px;
+  }
+}
+
+.header__logo-name {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.header__toggle {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  border: none;
+  background-color: #FFFFFF;
+  order: 2;
+
+  &:active {
+    background-color: #f0ebff;
+  }
+
+  &--closed {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 24px;
+      right: 22px;
+      height: 1.5px;
+      width: 16px;
+      background-color: #333333;
+      box-shadow: 0 5px 0 0 #333333, 0 10px 0 0 #333333;
+    }
+  }
+
+  &--open {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 29px;
+      right: 21px;
+      width: 17px;
+      height: 2px;
+      background-color: #333333;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+      box-shadow: none;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+      box-shadow: none;
+    }
+  }
+
+
+  @media (min-width: $tablet-width) {
+    display: none;
+    order: none;
+  }
+}
+
+.main-nav__toggle-menu--nojs {
+  display: none;
+}

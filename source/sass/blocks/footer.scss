@@ -1,10 +1,15 @@
 .footer {
   font-family: $font-title;
+  width: 280px;
+  padding: 0 20px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 728px;
+  }
 }
 
 .footer__wrapper {
-  min-width: 280px;
-  padding: 0 20px;
   margin: 20px 0;
   display: flex;
   justify-content: space-between;

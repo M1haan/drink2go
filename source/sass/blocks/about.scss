@@ -1,22 +1,29 @@
 .about {
-  background-color: #F3EBE1;
   font-family: $font-title;
 }
 
 .about__badge {
   color: #7859CF;
   text-align: center;
+  order: 1;
 }
 
 .about__title {
   font-weight: 700;
   font-size: 36px;
   line-height: 48px;
-  text-align: center;
   letter-spacing: 0.02em;
   color: #333333;
   margin: 0;
   margin-bottom: 10px;
+  order: 2;
+
+  @media (min-width: $tablet-width) {
+    font-size: 56px;
+    line-height: 80px;
+    margin-bottom: 17px;
+  }
+
 }
 
 .about__description {
@@ -25,11 +32,40 @@
   line-height: 20px;
   color: #333333;
   text-align: center;
+  padding-bottom: 22px;
+  order: 3;
+
+  @media (min-width: $tablet-width) {
+    max-width: 600px;
+    font-size: 20px;
+    line-height: 32px;
+    margin-bottom: 21px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 40px;
+  }
+}
+
+.about-slider__image {
+  width: 280px;
+  height: 280px;
+
+  @media (min-width: $tablet-width) {
+    width: 476px;
+    height: 476px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 600px;
+    height: 600px;
+  }
 }
 
 .about__buy {
   display: flex;
   margin: 0 25px;
+  order: 4;
 }
 
 .about__old-price {
@@ -51,4 +87,192 @@
 .about__button-buy {
   text-decoration: none;
   padding: 8px 20px;
+}
+
+.about-slider__container {
+  width: 100%;
+}
+
+.about-slider__wrapper {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: 320px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 728px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1360px;
+  }
+
+  &--nojs {
+    display: flex;
+    flex-direction: column;
+    max-width: 100vw;
+  }
+}
+
+.about-slider__item {
+  padding-top: 20px;
+  min-height: 635px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 59px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 25px;
+    padding-bottom: 55px;
+  }
+
+  &--flat-white {
+    background-color: #F3EBE1;
+
+    @media (min-width: $tablet-width) and (max-width: 1439px) {
+      background-image: linear-gradient(180deg, #F3EBE1 0, #F3EBE1 77%, #ffffff 77%);
+    }
+  }
+
+  &--latte {
+    background-color: #EAE6FC;
+
+    @media (min-width: $tablet-width) and (max-width: 1439px) {
+      background-image: linear-gradient(180deg, #EAE6FC 0, #EAE6FC 77%, #ffffff 77%);
+    }
+  }
+
+  &--espresso {
+    background-color:  #E5E6E8;
+
+    @media (min-width: $tablet-width) and (max-width: 1439px) {
+      background-image: linear-gradient(180deg,  #E5E6E8 0,  #E5E6E8 77%, #ffffff 77%);
+    }
+  }
+}
+
+
+.about-slider__content {
+  max-width: 280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    max-width: 608px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+    max-width: 625px;
+    height: 600px;
+    padding-left: 652px;
+    text-align: left;
+    align-items: flex-start;
+    justify-content: center;
+  }
+}
+
+.about-slider__picture {
+  order: 0;
+
+
+  @media (min-width: $tablet-width) and (max-width: 1439px) {
+    order: 5;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 4px;
+    left: 23px;
+    margin-bottom: 0;
+  }
+}
+
+.about-slider__button-next,
+.about-slider__button-prev {
+  position: absolute;
+  height: 100%;
+  width: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  top: 0;
+  z-index: 23;
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-top: 2px solid #7859cf;
+    border-right: 2px solid #7859cf;
+    top: 49%;
+
+
+    @media (min-width: $tablet-width) and (max-width: 1439px) {
+      top: 37.5%;
+    }
+  }
+}
+
+.about-slider__button-next {
+  right: 0;
+
+  &::before {
+    transform: rotate(45deg);
+    right: 7px;
+
+    @media (min-width: $tablet-width) {
+      right: 37px;
+    }
+  }
+}
+
+.about-slider__button-prev {
+  left: 0;
+
+  &::before {
+    transform: rotate(-135deg);
+    left: 7px;
+
+    @media (min-width: $tablet-width) {
+      left: 37px;
+    }
+  }
+}
+
+.swiper-pagination {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.swiper-horizontal > .swiper-pagination-bullets {
+  bottom: 65px;
+
+  @media (max-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.swiper-pagination-bullet {
+  width: 62px;
+  height: 4px;
+  background-color: #ffffff;
+  opacity: 1;
+  border-radius: 0;
+
+  &--active {
+    background-color: #7859cf;
+  }
 }

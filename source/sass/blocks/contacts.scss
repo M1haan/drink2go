@@ -2,6 +2,14 @@
   font-family: $font-title;
 }
 
+/* .contacts__address {
+
+}
+
+.contacts__link {
+
+} */
+
 .contacts__title {
   font-weight: 700;
   font-size: 14px;
@@ -10,20 +18,4 @@
   color: #7859CF;
   margin: 0;
   margin-bottom: 12px;
-}
-
-.contacts__address {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
-  color: #333333;
-}
-
-.contacts__link {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
-  color: #333333;
-  text-decoration: none;
 }

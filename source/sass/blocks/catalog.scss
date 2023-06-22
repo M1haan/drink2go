@@ -24,13 +24,140 @@
   color: #333333;
   margin: 0;
   margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 42px;
+    line-height: 64px;
+  }
 }
 
+.catalog__filter-container {
+  width: 280px;
+  padding: 0 20px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 728px;
+    margin: 0 auto;
+  }
+}
+
+.filter-price__title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #333333;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.filter-price__range {
+  position: relative;
+  height: 4px;
+  margin-bottom: 94px;
+  background-color: #E2E2E2;
+  border-radius: 2px;
+}
+
+.filter-price__range-scale {
+  position: relative;
+  height: 4px;
+  margin-bottom: 24px;
+  background-color: #E2E2E2;
+  border-radius: 2px;
+}
+
+.filter-price__range-bar {
+  width: 200px;
+  position: absolute;
+  height: 4px;
+  background-color: #7859CF;
+}
+
+.filter-price__range-toggle {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: #ffffff;
+  border: 2px solid #7859CF;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* .filter-price__range-toggle:hover {
+  background-color: #dbb590;
+}
+
+.filter-price__range-toggle:active,
+.filter-price__range-toggle:focus {
+  outline: 3px solid #dbb590;
+} */
+
+.filter-price__toggle-min {
+  top: -11px;
+  left: 0;
+}
+
+.filter-price__toggle-max {
+  top: -11px;
+  left: 200px;
+}
+
+.filter-price__range-wrapper-inputs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ilter-price__label {
+  display: flex;
+  margin-right: 5px;
+}
+
+.filter-price__range-field {
+  display: block;
+  max-width: 118px;
+  box-sizing: border-box;
+  padding: 8px 10px;
+  font-family: $font-title;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  background-color: #ffffff;
+  border: 2px solid #7859CF;
+  border-radius: 4px;
+  appearance: textfield;
+
+  @media (min-width: $tablet-width) {
+    max-width: 87px;
+  }
+
+}
+
+/* .filter-price__range-field::-webkit-outer-spin-button,
+.filter-price__range-field::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+} */
+
+
 // Фильтр наличия молока
+
+.catalog__form {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 223px);
+    column-gap: 30px;
+  }
+}
 
 .catalog__group {
   border: none;
   padding: 0;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
 }
 
 .filter-milk__title {
@@ -145,9 +272,11 @@
     left: 3px;
     border-radius: 50%;
   }
+
+
 }
 
-.checkbox__custom:checked {
+.checkbox__field:checked + .checkbox__custom {
   background-color: #7859CF;
 }
 
@@ -156,7 +285,7 @@
   transition: 0.5s;
 }
 
-.checkbox__custom:disabled + .checkbox__name {
+.checkbox__custom:disabled + checkbox {
   opacity: 0.5; /* НЕ РАБОТАЕТ */
 }
 
@@ -179,14 +308,28 @@
   overflow: hidden;
 }
 
+.catalog__button-container {
+  @media (min-width: $tablet-width) {
+   display: flex;
+   width: 277px;
+   justify-content: space-between;
+   margin: 0 auto;
+   grid-column: 2/3;
+  }
+}
+
 .catalog__button {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  width: 90%;
-  margin: 0 auto;
+  width: 100%;
+  padding: 8px 0;
   margin-bottom: 20px;
-  padding: 0 8px;
+
+  @media (min-width: $tablet-width) {
+    width: fit-content;
+    padding: 8px 20px;
+  }
 }
 
 /* КАТАЛОГ */
@@ -194,12 +337,38 @@
 .catalog-container {
   width: 280px;
   padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    width: 728px;
+
+  }
 }
 
 .card__list {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    width: 728px;
+    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 349px);
+    margin: 0 auto;
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1011px;
+    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 317px);
+    margin: 0 auto;
+    margin-bottom: 60px;
+  }
 }
 
 .card__item {
@@ -208,6 +377,10 @@
   background-color: #FFFFFF;
   font-family: $font-title;
   margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
 }
 
 .card__title {
@@ -253,8 +426,7 @@
     left: 15px;
     width: 20px;
     height: 16px;
-    background-image: url("../../img/icons/basket.svg");
-    background-color: #fff;
+    background-image: url("../img/basket.svg");
   }
 }
 
